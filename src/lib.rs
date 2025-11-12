@@ -25,6 +25,7 @@ pub extern "C" fn OpenConsole() {
 
 #[no_mangle]
 pub extern "C" fn DebugPrint(msg: *const c_char) {
+    println!("DebugPrint called");
     unsafe {
         if msg.is_null() {
             return;
